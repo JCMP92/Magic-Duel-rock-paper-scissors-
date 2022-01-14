@@ -18,13 +18,13 @@
         let gameRound = playRound(playerSelection, computerSelection);
 
             if(gameRound === "Draw"){
-            console.log("Meh... It´s a Draw.");
+                document.getElementById("comp-choice").innerHTML ="Meh... It´s a Draw.";
             }else if(gameRound === "Loose"){
             defeat ++;
-            console.log("You loose this one.");
+            document.getElementById("comp-choice").innerHTML ="You loose this one.";
             }else if(gameRound === "Win"){
                 victory ++;
-                console.log("Great! you are awesome.");
+                document.getElementById("comp-choice").innerHTML ="Great! you are awesome.";
             }
         
         function playRound(playerSelection, computerSelection) {
@@ -38,10 +38,23 @@
                 return "Win";
             }        
         } 
+        console.log(computerSelection);
+        // document.getElementById("comp-choice").innerHTML = computerSelection;
+        document.getElementById("victories").innerHTML = victory;
+        document.getElementById("looses").innerHTML = defeat;
 
-        console.log('Victories:' + victory);
-        console.log('Looses:' + defeat);
-
+            if(victory === 5){
+                console.log("Amazing! you are the new Champion");
+                endGame();
+            } else if(defeat === 5){
+                console.log("You died...");
+                endGame();
+            }
+        
+        function endGame() {
+            victory = 0;
+            defeat = 0;      
+        }    
     }));
     
     
