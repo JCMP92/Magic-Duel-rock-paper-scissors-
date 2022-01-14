@@ -2,17 +2,29 @@ function game() {
     let victory = 0;
     let defeat = 0;
     const round = 5;
+    
+    const eachButtons = document.querySelectorAll('input');
+    eachButtons.forEach(elem => elem.addEventListener('click', function () {
+           console.log(this.name);
+        }));
+    
+    
+    // const rockBtn = document.getElementById("rock");
+    // rockBtn.addEventListener('click', function () {
+    //     console.log(this.id);
+    // });
+    // const paperBtn = document.getElementById("paper");
+    // paperBtn.addEventListener('click', function () {
+    //     console.log(this.id);
+    // });
+    
+    // const scissBtn = document.getElementById("scissors");
+    // scissBtn.addEventListener('click', function () {
+    //     console.log(this.id);
+    // });
 
-    document.getElementById("rock").addEventListener('click', function () {
-        console.log('rock');
-    });
-    document.getElementById("paper").addEventListener('click', function () {
-        console.log('paper');
-    });
-    document.getElementById("scissors").addEventListener('click', function () {
-        console.log('scissors');
-    });
 
+    
     // for (let i = 0; i < round; i++) {
     // let playerSelection = prompt("Choose one: Rock, Paper or Scissors").toLowerCase();
     // function computerPlay() {
@@ -60,3 +72,4 @@ function game() {
     // } 
 };
 
+game();
