@@ -44,17 +44,26 @@
         document.getElementById("looses").innerHTML = defeat;
 
             if(victory === 5){
-                console.log("Amazing! you are the new Champion");
-                endGame();
+                document.getElementById("comp-choice").innerHTML ='Amazing! you are the new Champion';
+                eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
+                //endGame();
+                
             } else if(defeat === 5){
-                console.log("You died...");
-                endGame();
+                document.getElementById("comp-choice").innerHTML ='You died...';
+                eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
+                //endGame();
             }
         
         function endGame() {
             victory = 0;
-            defeat = 0;      
-        }    
+            defeat = 0; 
+            document.getElementById("victories").innerHTML = victory;
+            document.getElementById("looses").innerHTML = defeat;
+            eachButtons.forEach(elem => elem.removeAttribute("disabled"));     
+        }   
+        
+        const restartButton = document.getElementById('play-again');
+        restartButton.addEventListener('click', endGame);
     }));
     
     
