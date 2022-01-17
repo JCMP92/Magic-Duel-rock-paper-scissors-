@@ -1,8 +1,8 @@
-
+// GAME: This is the game code, with this the game will work 
+        
     let victory = 0;
     let defeat = 0;
-    const round = 5;
-    
+
     const eachButtons = document.querySelectorAll('input');
     eachButtons.forEach(elem => elem.addEventListener('click', function game() {
          
@@ -18,13 +18,13 @@
         let gameRound = playRound(playerSelection, computerSelection);
 
             if(gameRound === "Draw"){
-                document.getElementById("comp-choice").innerHTML ="Meh... It´s a Draw.";
+                document.getElementById("result-text").innerHTML ="Meh... It´s a Draw.";
             }else if(gameRound === "Loose"){
             defeat ++;
-            document.getElementById("comp-choice").innerHTML ="You loose this one.";
+            document.getElementById("result-text").innerHTML ="You loose this one.";
             }else if(gameRound === "Win"){
                 victory ++;
-                document.getElementById("comp-choice").innerHTML ="Great! you are awesome.";
+                document.getElementById("result-text").innerHTML ="Great! you are awesome.";
             }
         
         function playRound(playerSelection, computerSelection) {
@@ -42,14 +42,15 @@
         // document.getElementById("comp-choice").innerHTML = computerSelection;
         document.getElementById("victories").innerHTML = victory;
         document.getElementById("looses").innerHTML = defeat;
+        document.getElementById("comp-spell").innerHTML = computerSelection;
 
             if(victory === 5){
-                document.getElementById("comp-choice").innerHTML ='Amazing! you are the new Champion';
+                document.getElementById("result-text").innerHTML ='Amazing! you are the new Champion';
                 eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
                 //endGame();
                 
             } else if(defeat === 5){
-                document.getElementById("comp-choice").innerHTML ='You died...';
+                document.getElementById("result-text").innerHTML ='You died...';
                 eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
                 //endGame();
             }
@@ -59,6 +60,8 @@
             defeat = 0; 
             document.getElementById("victories").innerHTML = victory;
             document.getElementById("looses").innerHTML = defeat;
+            document.getElementById("comp-spell").innerHTML = '';
+            document.getElementById("result-text").innerHTML = 'but do it wisely...';
             eachButtons.forEach(elem => elem.removeAttribute("disabled"));     
         }   
         
@@ -67,34 +70,3 @@
     }));
     
     
-    // const rockBtn = document.getElementById("rock");
-    // rockBtn.addEventListener('click', function () {
-    //     console.log(this.id);
-    // });
-    // const paperBtn = document.getElementById("paper");
-    // paperBtn.addEventListener('click', function () {
-    //     console.log(this.id);
-    // });
-    
-    // const scissBtn = document.getElementById("scissors");
-    // scissBtn.addEventListener('click', function () {
-    //     console.log(this.id);
-    // });
-
-
-    
-    // for (let i = 0; i < round; i++) {
-    // let playerSelection = prompt("Choose one: Rock, Paper or Scissors").toLowerCase();
-    
-     
-    // let score ={
-    //     'Wins':victory,
-    //     'Defeats':defeat,
-    // }; 
-    // if (victory > defeat) {
-    //     console.log("Amazing! you are the new Champion")
-    //     return score;
-    // } else {
-    //     console.log("You died...")
-    //     return score;
-    // };

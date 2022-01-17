@@ -5,29 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Love+Light&family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4013d3bcd3.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Magic Duel</h1>
-    <h3>choose your spell</h3>
+    <h1>Magic <span>Duel</span></h1>
+    <h2>choose your spell</h2>
+    <p id="result-text">but do it wisely...</p>
 
-    
-    <div class="button">
-        <label for="rock">Rock</label><br>
-        <input type="button" id="rock" name="rock"><br>
-    </div>
-        
-    <div class="button">
-        <label for="paper">Paper</label><br>
-        <input type="button" id="paper" name="paper"><br>
-    </div>    
+        <div class="button-container">    
+            <div class="button">
+                <input type="button" id="rock" name="rock"><br>
+                <label for="rock">Rock</label><br>
+                <i class="fas fa-dragon"></i>
+            </div>
+                
+            <div class="button">
+                <input type="button" id="paper" name="paper"><br>
+                <label for="paper">Paper</label><br>
+            </div>    
 
-    <div class="button">
-        <label for="scissors">Scissors</label><br>
-        <input type="button" id="scissors" name="scissors"><br>
-    </div>    
-    
-    <section >
+            <div class="button">
+                <input type="button" id="scissors" name="scissors"><br>
+                <label for="scissors">Scissors</label><br>
+            </div>    
+        </div>
+
+    <section>
         <div class="score">   
             <div class="display-text">
                 <p>Victories</p>
@@ -41,9 +55,11 @@
     </section>
 
     <section>
-        <div class="computer-choice"> 
-            <p id="comp-choice"></p>
+        <div>
+            <p>Enemy spell</p>
+            <p id="comp-spell"></p>
         </div>
+        
     </section>
 
     <section>
@@ -51,5 +67,6 @@
             <button id="play-again">Do you want to figth again?</button>
         </div>
     </section>
+
 </body>
 </html>
