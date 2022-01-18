@@ -4,55 +4,110 @@
     --outter-fire: #eb6543;
     --inner-ice: #bef4fc;
     --outter-ice: #5f97f3;
+    --general-color:#928da1;
     }
 html{
     margin: 0;
     font-size: 10px;
     height: 100vh;
     font-family: 'Hammersmith One', sans-serif;
-    color: #928da1;
+    color: var(--general-color);
 }
 body{
     background-color: var(--white);
     text-align: center;
 }
 h1{
-    font-size: 7rem;
+    font-size: 14rem;
     font-family:  'Love Light', cursive;
     padding: 0;
     margin: 0;
-    margin-bottom: 2rem;
     color: var(--inner-fire);
-    text-shadow: 0 0 6px var(--outter-fire);
+    text-shadow: 0 0 12px var(--outter-fire);
 }
 h1 span{
     color: var(--inner-ice);
-    text-shadow: 0 0 6px var(--outter-ice);
+    text-shadow: 0 0 12px var(--outter-ice);
 }
 h2{
-    font-size: 3rem;
+    font-size: 6rem;
     font-family: 'Qwitcher Grypen', cursive;
-    padding: .5rem;
-    margin-top: 1rem;
+    padding: 1rem;
+    margin: 0;
+}
+#result-text{
+    font-size: 2rem;
 }
 .button-container{
     display: flex;
     justify-content: center;
 }
+button{
+    border-style: none;
+    color: white;
+    background-color: var(--white);
+}
 .button{
-    background-color: tomato;
-    margin: 2rem;
-    padding: 1.5rem;
-    width: 3rem;
-    height: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem;
+    margin-top: 0;
+    padding: 3rem;
+    width: 10rem;
+    height: 6rem;
+}
+#dragon {
+    color: var(--outter-fire);
+}
+#dragon :hover{
+    transition: all 0.07s;
+    transform: scale(1.2);
+}
+#frost {
+    color: var(--outter-ice);
+}
+#frost :hover{
+    transition: all 0.07s;
+    transform: scale(1.2);
+}
+#poison {
+    color: rgb(109, 243, 109);
+}
+#poison :hover{
+    transition: all 0.07s;
+    transform: scale(1.2);
+}
+.player-choice{
+    margin: 0;
+    width: 12rem;
+    height: 12rem;
 }
 .score{
     display: flex;
     justify-content: center;
     margin: 0;
+    margin-top: 6rem;
     padding: 0;
 }
 .display-text{
-    margin: 0rem 2rem;
+    margin: 0rem 4rem;
     padding: 0;
+}
+.enemy-choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.enemy-choices p{
+    margin-bottom: 0;
+}
+#comp-spell{
+    margin-bottom: 2rem;
+}
+#play-again{
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 4rem;
+    background-color: var(--general-color);
+    border-radius: 4rem;
+    border-style: none;
 }

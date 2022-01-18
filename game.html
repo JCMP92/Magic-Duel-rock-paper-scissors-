@@ -24,20 +24,17 @@
     <p id="result-text">but do it wisely...</p>
 
         <div class="button-container">    
-            <div class="button">
-                <input type="button" id="rock" name="rock"><br>
-                <label for="rock">Rock</label><br>
-                <i class="fas fa-dragon"></i>
+            <div class="button" id="dragon-b">
+                <button id="dragon" name="dragon" class="player-choice"><i class="fas fa-dragon fa-7x"></i></button>
             </div>
+            
                 
             <div class="button">
-                <input type="button" id="paper" name="paper"><br>
-                <label for="paper">Paper</label><br>
+                <button id="poison" name="poison" class="player-choice"><i class="fas fa-skull-crossbones fa-7x"></i></button>
             </div>    
 
             <div class="button">
-                <input type="button" id="scissors" name="scissors"><br>
-                <label for="scissors">Scissors</label><br>
+                <button id="frost" name="frost" class="player-choice"><i class="fas fa-snowflake fa-7x"></i></button>
             </div>    
         </div>
 
@@ -48,6 +45,9 @@
                 <p id="victories"></p>
             </div>
             <div class="display-text">
+                <p id="comments"></p>
+            </div>
+            <div class="display-text">
                 <p>Defeats</p>
                 <p id="looses"></p>
             </div>
@@ -55,7 +55,7 @@
     </section>
 
     <section>
-        <div>
+        <div class="enemy-choices">
             <p>Enemy spell</p>
             <p id="comp-spell"></p>
         </div>
