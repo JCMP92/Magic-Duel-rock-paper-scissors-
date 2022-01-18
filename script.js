@@ -1,4 +1,4 @@
-// GAME: This is the game code, with this the game will work 
+// GAME
         
     let victory = 0;
     let defeat = 0;
@@ -48,13 +48,13 @@
                 document.getElementById("comments").innerHTML ='Amazing! you are the new Champion';
                 eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
                 document.getElementById("result-text").innerHTML = 'but do it wisely...';
-                //endGame();
+                showHiden();
                 
             } else if(defeat === 5){
                 document.getElementById("comments").innerHTML ='You died...';
                 eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
                 document.getElementById("result-text").innerHTML = 'but do it wisely...';
-                //endGame();
+                showHiden();
             }
         
         function endGame() {
@@ -63,12 +63,27 @@
             document.getElementById("victories").innerHTML = victory;
             document.getElementById("looses").innerHTML = defeat;
             document.getElementById("comp-spell").innerHTML = '';
-            document.getElementById("comments").innerHTML = '';
-            eachButtons.forEach(elem => elem.removeAttribute("disabled"));     
+            document.getElementById("comments").innerHTML = 'Are you ready?';
+            eachButtons.forEach(elem => elem.removeAttribute("disabled")); 
+            addHiden();    
         }   
         
         const restartButton = document.getElementById('play-again');
         restartButton.addEventListener('click', endGame);
+
+        //This functions are just to hide and show the restart button, called when the if statements of victory or defeat are met
+
+        function showHiden() { 
+            const hidButton = document.querySelector('#button-container');
+            hidButton.classList.remove('no-display');
+        }
+        function addHiden() {
+            const hidButton = document.querySelector('#button-container');
+            hidButton.classList.add('no-display');
+        }
+
+        //This functions are just to hide and show the restart button, called with the end function
+
     }));
 
 
