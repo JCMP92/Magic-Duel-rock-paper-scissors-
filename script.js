@@ -39,22 +39,20 @@
             }        
         } 
         console.log(computerSelection);
-        // document.getElementById("comp-choice").innerHTML = computerSelection;
         document.getElementById("victories").innerHTML = victory;
         document.getElementById("looses").innerHTML = defeat;
-        document.getElementById("comp-spell").innerHTML = computerSelection;
 
             if(victory === 5){
                 document.getElementById("comments").innerHTML ='Amazing! you are the new Champion';
                 eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
                 document.getElementById("result-text").innerHTML = 'but do it wisely...';
-                showHiden();
+                modalDisplay();
                 
             } else if(defeat === 5){
                 document.getElementById("comments").innerHTML ='You died...';
                 eachButtons.forEach(elem => elem.setAttribute("disabled", 1));
                 document.getElementById("result-text").innerHTML = 'but do it wisely...';
-                showHiden();
+                modalDisplay();
             }
         
         function endGame() {
@@ -62,31 +60,45 @@
             defeat = 0; 
             document.getElementById("victories").innerHTML = victory;
             document.getElementById("looses").innerHTML = defeat;
-            document.getElementById("comp-spell").innerHTML = '';
             document.getElementById("comments").innerHTML = 'Are you ready?';
             eachButtons.forEach(elem => elem.removeAttribute("disabled")); 
-            addHiden();    
+            icon.classList.remove('fa-dragon', 'fa-skull-crossbones', 'fa-snowflake');
+            icon.classList.add('fa-book-dead');
+            icon.style.color = '#928da1';
+            modalHide();    
         }   
         
         const restartButton = document.getElementById('play-again');
         restartButton.addEventListener('click', endGame);
 
-        //This functions are just to hide and show the restart button, called when the if statements of victory or defeat are met
+        //Computer choice icons
+        const icon = document.getElementById('enemy-icon');
+        icon.classList.remove('fa-book-dead', 'fa-dragon', 'fa-skull-crossbones', 'fa-snowflake');
+            if (computerSelection === 'dragon') {
+                icon.classList.add('fa-dragon');
+                icon.style.color = '#eb6543';
+            } else if (computerSelection === 'poison'){
+                icon.classList.add('fa-skull-crossbones');
+                icon.style.color = '#6df36d';
+            } else if (computerSelection === 'frost') {
+                icon.classList.add('fa-snowflake');
+                icon.style.color = '#5f97f3';
+            };
 
-        function showHiden() { 
-            const hidButton = document.querySelector('#button-container');
-            hidButton.classList.remove('no-display');
-        }
-        function addHiden() {
-            const hidButton = document.querySelector('#button-container');
-            hidButton.classList.add('no-display');
-        }
+//Modal functions
+        function modalDisplay() {
+            const modal = document.getElementById('my-modal');
+            modal.style.display = "block";
+          };
+        function modalHide() {
+            const modal = document.getElementById('my-modal');
+            modal.style.display = "none";
+          } 
 
-        //This functions are just to hide and show the restart button, called with the end function
 
     }));
 
-
+// Display text when :hover over buttons
     eachButtons.forEach(elem => elem.addEventListener('mouseover', func, false));
     eachButtons.forEach(elem => elem.addEventListener('mouseout', func1, false));
     function func(){
@@ -99,7 +111,6 @@
         }
         
     }
-
     function func1(){
         document.getElementById("result-text").innerHTML = 'but do it wisely...';
     }

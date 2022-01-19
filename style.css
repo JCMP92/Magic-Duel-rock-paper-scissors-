@@ -41,6 +41,12 @@ h2{
 .button-container{
     display: flex;
     justify-content: center;
+    border-style: solid;
+    border-color: var(--inner-fire);
+    border-radius: 1rem;
+    box-shadow: 0 0 12px var(--outter-fire);
+    width: 70rem;
+    margin: auto;
 }
 button{
     border-style: none;
@@ -50,8 +56,8 @@ button{
 .button{
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
     margin: 4rem;
-    margin-top: 0;
     padding: 3rem;
     width: 10rem;
     height: 6rem;
@@ -71,11 +77,14 @@ button{
     transform: scale(1.2);
 }
 #poison {
-    color: rgb(109, 243, 109);
+    color: #6df36d;
 }
 #poison :hover{
     transition: all 0.07s;
     transform: scale(1.2);
+}
+#enemy-icon{
+    color: var(--general-color);
 }
 .player-choice{
     margin: 0;
@@ -86,8 +95,7 @@ button{
     display: flex;
     justify-content: center;
     margin: 0;
-    margin-top: 3rem;
-    padding: 0;
+    padding: 2rem 0;
     font-size: 2rem;
 }
 .display-text{
@@ -96,20 +104,31 @@ button{
 }
 .enemy-choices{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     font-size: 2rem;
+    border-style: solid;
+    border-color: var(--inner-ice);
+    border-radius: 1rem;
+    box-shadow: 0 0 12px var(--outter-ice);
+    width: 40rem;
+    margin: auto;
+    padding: 1rem;
 }
 .enemy-choices p{
-    margin-bottom: 0;
+    margin: 0;
+    align-self: center;
 }
 #comp-spell{
     margin-bottom: 2rem;
 }
+.computerspell-icon{
+    margin: 0 4rem;
+}
 #play-again{
     font-family: 'Qwitcher Grypen', cursive;
     font-size: 4rem;
-    background-color: var(--general-color);
+    background-color: white;
+    color: var(--general-color);
     border-radius: 4rem;
     border-style: none;
 }
@@ -118,6 +137,31 @@ button{
     transform: scale(1.2);
 }
 
-.no-display{
-    display: none;
-}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: none;
+    margin: auto; /*centered */
+    padding: 2rem;
+    border: none;
+    border-radius: 1rem;
+    width: 60rem; /* Could be more or less, depending on screen size */
+  }
+  
