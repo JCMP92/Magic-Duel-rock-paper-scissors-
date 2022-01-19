@@ -1,0 +1,206 @@
+:root{
+    --white: #f3f3f3;
+    --inner-fire: #fff1b5;
+    --outter-fire: #eb6543;
+    --inner-ice: #bef4fc;
+    --outter-ice: #5f97f3;
+    --general-color:#928da1;
+    }
+html{
+    margin: 0;
+    font-size: 10px;
+    height: 100vh;
+    font-family: 'Hammersmith One', sans-serif;
+    color: var(--general-color);
+}
+body{
+    background-color: var(--white);
+    text-align: center;
+}
+h1{
+    font-size: 14rem;
+    font-family:  'Love Light', cursive;
+    padding: 0;
+    margin: 0;
+    color: var(--inner-fire);
+    text-shadow: 0 0 12px var(--outter-fire);
+}
+h1 span{
+    color: var(--inner-ice);
+    text-shadow: 0 0 12px var(--outter-ice);
+}
+h2{
+    font-size: 6rem;
+    font-family: 'Qwitcher Grypen', cursive;
+    padding: 1rem;
+    margin: 0;
+}
+#result-text{
+    font-size: 2rem;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: var(--inner-fire);
+    border-radius: 1rem;
+    box-shadow: 0 0 12px var(--outter-fire);
+    width: 70rem;
+    margin: auto;
+}
+button{
+    border-style: none;
+    color: white;
+    background-color: var(--white);
+}
+.button{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 4rem;
+    padding: 3rem;
+    width: 10rem;
+    height: 6rem;
+}
+#dragon {
+    color: var(--outter-fire);
+    font-size: 9rem;
+}
+#dragon:hover{
+    transition: all 0.07s;
+    transform: scale(1.2);
+}
+#frost {
+    color: var(--outter-ice);
+    font-size: 9rem;
+}
+#frost:hover{
+    transition: all 0.07s;
+    transform: scale(1.2);
+}
+#poison {
+    color: #6df36d;
+    font-size: 9rem;
+}
+#poison:hover{
+    transition: all 0.07s;
+    transform: scale(1.2);
+}
+#enemy-icon{
+    color: var(--general-color);
+}
+.player-choice{
+    margin: 0;
+    width: 12rem;
+    height: 12rem;
+}
+.score{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+.display-text{
+    margin: 0rem 4rem;
+    padding: 0;
+}
+.enemy-choices{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    border-style: solid;
+    border-color: var(--inner-ice);
+    border-radius: 1rem;
+    box-shadow: 0 0 12px var(--outter-ice);
+    width: 40rem;
+    margin: auto;
+    padding: 1rem;
+}
+.enemy-choices p{
+    margin: 0;
+    align-self: center;
+}
+#comp-spell{
+    margin-bottom: 2rem;
+}
+.computerspell-icon{
+    margin: 0 4rem;
+}
+#play-again{
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 4rem;
+    background-color: white;
+    color: var(--general-color);
+    border-radius: 4rem;
+    border-style: none;
+}
+#play-again:hover{
+    transition: all 0.07s;
+    transform: scale(1.2);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  rgba(0,0,0,0.4);;
+    margin: auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 1rem;
+    width: 40rem;
+    height: 14rem;
+  }
+  #final-msg{
+      color: white;
+      font-size: 2rem;
+  }
+  /*Footer*/
+  footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .page-end{
+    font-size: 1.5rem;
+    font-family: 'Hammersmith One', sans-serif;
+    color:var(--general-color);
+  }
+
+  /*Responsive*/
+  @media (max-width: 750px){
+  html{
+      font-size: 8px;
+  }    
+  .fas {
+      font-size: 7rem;
+  }
+  .button-container{
+      width: 80%;
+  }
+  .button{
+    margin: 4rem 1rem;
+    padding: 3rem 1rem;
+  }
+  }

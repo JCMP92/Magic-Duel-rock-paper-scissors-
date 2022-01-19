@@ -4,11 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Love+Light&family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4013d3bcd3.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Magic Tournament</h1>
-    <h3>choose your spell</h3>
+    <h1>Magic <span>Duel</span></h1>
+    <h2>choose your spell</h2>
+    <p id="result-text">but do it wisely...</p>
+
+        <div class="button-container">    
+            <div class="button" id="dragon-b">
+                <button id="dragon" name="dragon" class="player-choice"><i class="fas fa-dragon"></i></button>
+            </div>
+            
+                
+            <div class="button">
+                <button id="poison" name="poison" class="player-choice"><i class="fas fa-skull-crossbones"></i></button>
+            </div>    
+
+            <div class="button">
+                <button id="frost" name="frost" class="player-choice"><i class="fas fa-snowflake"></i></button>
+            </div>    
+        </div>
+
+    <section>
+        <div class="score">   
+            <div class="display-text">
+                <p id="comments">Are you ready?</p>  
+            </div>
+            <div class="display-text">
+                <p>Victories</p>
+                <p id="victories">0</p>
+            </div>
+            <div class="display-text">
+                <p>Defeats</p>
+                <p id="looses">0</p>
+            </div>
+        </div>     
+    </section>
+
+    <section>
+        <div class="enemy-choices">
+            <p>Enemy spell</p>
+            <i class="computerspell-icon fas fa-book-dead fa-3x" id="enemy-icon"></i>
+        </div>
+        
+    </section>
+
+        <!-- The Modal -->
+    <div id="my-modal" class="modal">
+        <div class="modal-content" id="button-container">
+            <p id="final-msg"></p>
+            <button id="play-again">Do you want to figth again?</button>
+        </div>   
+    </div>
+<footer class="page-end">
+    <p>Coded by Juan Montes-Pesquera</p>
+</footer>
 </body>
 </html>
