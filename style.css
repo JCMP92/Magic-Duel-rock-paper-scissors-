@@ -65,21 +65,21 @@ button{
 #dragon {
     color: var(--outter-fire);
 }
-#dragon :hover{
+#dragon:hover{
     transition: all 0.07s;
     transform: scale(1.2);
 }
 #frost {
     color: var(--outter-ice);
 }
-#frost :hover{
+#frost:hover{
     transition: all 0.07s;
     transform: scale(1.2);
 }
 #poison {
     color: #6df36d;
 }
-#poison :hover{
+#poison:hover{
     transition: all 0.07s;
     transform: scale(1.2);
 }
@@ -132,7 +132,7 @@ button{
     border-radius: 4rem;
     border-style: none;
 }
-#button-container :hover{
+#play-again:hover{
     transition: all 0.07s;
     transform: scale(1.2);
 }
@@ -157,11 +157,15 @@ button{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: none;
-    margin: auto; /*centered */
+    background-color:  rgba(0,0,0,0.4);;
+    margin: auto;
     padding: 2rem;
     border: none;
     border-radius: 1rem;
-    width: 60rem; /* Could be more or less, depending on screen size */
+    width: 40rem;
+    height: 14rem;
   }
-  
+  #final-msg{
+      color: white;
+      font-size: 2rem;
+  }
