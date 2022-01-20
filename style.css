@@ -204,3 +204,20 @@ button{
     padding: 3rem 1rem;
   }
   }
+
+  @media (max-width: 400px ) {
+    html{
+        font-size: 6px;
+    }    
+    .fas {
+        font-size: 7rem;
+    }
+    .button-container{
+        width: 80%;
+    }
+    .button{
+        margin: 4rem 1rem;
+        padding: 3rem 1rem;
+    }
+    }   
+  
